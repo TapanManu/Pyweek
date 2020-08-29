@@ -9,13 +9,30 @@ for x in origin:
     duplicates.append(x)
 print(new)
 
-#fibonacci with recursion specified with count 
+#given a string ,print only unique values in that string(any order)
+#and print number of combinations of output
 
-def fibonacci(x):
-  if(x<=1):
-    return x
-  return fibonacci(x-1)+fibonacci(x-2)
+str="1001001023241441011101010"
+list=[x for x in str]
+s = set(list)
+print(''.join(s)) 
 
-for i in range(5):
-  print(fibonacci(i))
+#recursive function for factorial
+'''
+def fact(x):
+	if(x<=1):
+		return x
+	return fact(x-1)
+	'''
+#print(fact(len(s)))
+
+#or use loops
+
+i=1
+fact=1
+for i in range(1,len(s)+1):
+	fact=fact*i
+
+print("no of combinations of output",fact)
+
 
